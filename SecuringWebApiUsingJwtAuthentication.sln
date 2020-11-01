@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecuringWebApiUsingJwtAuthentication", "SecuringWebApiUsingJwtAuthentication\SecuringWebApiUsingJwtAuthentication.csproj", "{14E343B2-EE0E-43F6-A1AD-03041F3220F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E343B2-EE0E-43F6-A1AD-03041F3220F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E343B2-EE0E-43F6-A1AD-03041F3220F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E343B2-EE0E-43F6-A1AD-03041F3220F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E343B2-EE0E-43F6-A1AD-03041F3220F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6234D339-39C7-4CAB-A448-B002C74E020F}
+	EndGlobalSection
+EndGlobal
