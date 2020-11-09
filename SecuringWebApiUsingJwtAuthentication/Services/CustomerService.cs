@@ -18,13 +18,15 @@ namespace SecuringWebApiUsingJwtAuthentication.Services
 
         public async Task<LoginResponse> Login(LoginRequest loginRequest)
         {
-            var passwordHash = HashingHelper.ComputeSHA256Hash(loginRequest.Password);
-            var customer = customersDbContext.Customers.SingleOrDefault(customer =>
-                                                customer.Active &&
-                                                customer.Username == loginRequest.Username &&
-                                                customer.Password == passwordHash // Always make sure to save hashed passwords when working on real products
-                                                );
+            var customer = customersDbContext.Customers.SingleOrDefault(customer => customer.Active && customer.Username == loginRequest.Username);
+
             if (customer == null)
+            {
+                return null;
+            }
+            var passwordHash = HashingHelper.HashUsingPbkdf2(loginRequest.Password, customer.PasswordSalt);
+
+            if (customer.Password != passwordHash)
             {
                 return null;
             }
